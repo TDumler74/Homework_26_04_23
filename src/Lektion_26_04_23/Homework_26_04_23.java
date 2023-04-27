@@ -1,7 +1,9 @@
 package Lektion_26_04_23;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+
 
 public class Homework_26_04_23 {
 
@@ -16,13 +18,12 @@ public class Homework_26_04_23 {
     Scanner scanner = new Scanner(System.in);
 
     daysPerMonth(monthName(scanner));
-
+    scanner.close();
   }
 
   private static String monthName(Scanner scanner) {
     System.out.print("Enter your favorite month : ");
     String monthName = scanner.nextLine();
-
     return monthName;
   }
 
@@ -48,7 +49,7 @@ public class Homework_26_04_23 {
     AUTUMN
   }
 
-  private static Month daysPerMonth(String monthName) {
+  private static void daysPerMonth(String monthName) {
 
     Map<Month, Integer> daysPerMonth = new HashMap<>();
     daysPerMonth.put(Month.JANUARY, 31);
@@ -67,9 +68,6 @@ public class Homework_26_04_23 {
     Month monthKey = Month.valueOf(monthName.toUpperCase()); // месяц "как ключ словаря"
     System.out.println(monthName + " has " + daysPerMonth.get(monthKey) + " days");
     System.out.println(monthName + " is a month of " + parseSeason(monthKey));
-
-    return monthKey;
-
   }
 
   private static Season parseSeason(Month month) {
@@ -83,8 +81,6 @@ public class Homework_26_04_23 {
 
       case SEPTEMBER, OCTOBER, NOVEMBER -> Season.AUTUMN;
     };
-
-
   }
 
 }
