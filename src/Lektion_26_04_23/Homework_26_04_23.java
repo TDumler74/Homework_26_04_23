@@ -1,6 +1,7 @@
 package Lektion_26_04_23;
 
 
+import Lektion_26_04_23.Homework_26_04_23_1_1.Season;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -22,11 +23,12 @@ public class Homework_26_04_23 {
   }
 
   private static String monthName(Scanner scanner) {
-    System.out.print ("Enter your favorite month : ");
+    System.out.print("Enter your favorite month : ");
     String monthName = scanner.nextLine();
 
     return monthName;
   }
+
   private enum Month {
     JANUARY,
     FEBRUARY,
@@ -41,12 +43,14 @@ public class Homework_26_04_23 {
     NOVEMBER,
     DECEMBER
   }
+
   private enum Season {
     WINTER,
     SPRING,
     SUMMER,
     AUTUMN
   }
+
   private static Month daysPerMonth(String monthName) {
 
     Map<Month, Integer> daysPerMonth = new HashMap<>();
@@ -73,19 +77,17 @@ public class Homework_26_04_23 {
 
   private static Season parseSeason(Month month) {
 
-    switch (month) {
-      case DECEMBER, JANUARY, FEBRUARY:
-        return Season.WINTER;
-      case MARCH, APRIL, MAY:
-        return Season.SPRING;
-      case JUNE, JULY, AUGUST:
-        return Season.SUMMER;
-      case SEPTEMBER, OCTOBER, NOVEMBER:
-        return Season.AUTUMN;
+    return switch (month) {
+      case DECEMBER, JANUARY, FEBRUARY -> Season.WINTER;
+
+      case MARCH, APRIL, MAY -> Season.SPRING;
+
+      case JUNE, JULY, AUGUST -> Season.SUMMER;
+
+      case SEPTEMBER, OCTOBER, NOVEMBER -> Season.AUTUMN;
+    };
 
 
-    }
-    return Season.AUTUMN;
   }
 
 }
