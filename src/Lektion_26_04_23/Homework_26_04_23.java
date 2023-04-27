@@ -1,7 +1,4 @@
 package Lektion_26_04_23;
-
-
-import Lektion_26_04_23.Homework_26_04_23_1_1.Season;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
