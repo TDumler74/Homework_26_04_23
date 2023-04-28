@@ -44,6 +44,7 @@ public class Homework2_26_04_23 {
 
 
     }
+    br.close();
 
     return monthIntegerHashMap;
 
