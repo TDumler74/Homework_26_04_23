@@ -1,5 +1,4 @@
 package Lektion_26_04_23;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
