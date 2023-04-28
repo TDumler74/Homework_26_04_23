@@ -18,6 +18,7 @@ public class Homework_26_04_23 {
     Scanner scanner = new Scanner(System.in);
 
     daysPerMonth(monthName(scanner));
+
     scanner.close();
   }
 
